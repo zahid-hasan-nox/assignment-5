@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html data-theme="cupcake" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/46a0597978.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="poppins bg-[#F4F7FF] pt-6 px-20">
+    <header class="bg-white mb-10 shadow-lg shadow-gray-300 ... rounded-xl">
+      <nav class="flex justify-between items-center mx-6 p-4 rounded-xl">
+        <!-- left side -->
+        <div class="flex items-center gap-3">
+          <img src="./image/Vector.png" alt="" />
+          <h2 class="text-[#00303C] text-3xl">
+            Dev <span class="text-[#00303C] font-bold">Board</span>
+          </h2>
+        </div>
+        <!-- right side -->
+        <div>
+          <div>
+            <button
+              id="swtich2"
+              class="bg-[#3752FD] text-white px-4 py-3 rounded-lg"
+            >
+              Back to Desk
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="font-bold text-2xl text-center">Blogs</h1>
+      <!-- Q - 1 -->
+      <div>
+        <div class="pb-8 mt-6">
+          <h2
+            class="mb-4 font-bold p-4 bg-white rounded-lg text-xl text-[#00303C]"
+          >
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h2>
+          <hr />
+          <p class="text-gray-500 p-4 rounded-lg bg-white mt-4">
+            বিভিন্ন ভাবে আমরা এলিমেন্ট সিলেক্ট করতে পারে ,১
+            document.getElementById , ২document.getElementsByClassName , ৩
+            document.getElementsByTagName , ৪ document.querySelector ,৫
+            document.querySelectorAll
+          </p>
+        </div>
+        <!-- Q - 2 -->
+        <div class="pb-8 mt-6">
+          <h2
+            class="mb-4 font-bold p-4 bg-white rounded-lg text-xl text-[#00303C]"
+          >
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h2>
+          <hr />
+          <p class="text-gray-500 p-4 rounded-lg bg-white mt-4">
+            innerHTML ভিতরে আমরা js তে আলাদা ভাবে html teg বসাতে পারি ।
+            innerText মাধ্যমে js এ teg এর ভিতরে কন্টেন্ট লিখা যায় । textContent
+            শুধুমাত্র টেক্সট নেয়, HTML প্রসেস করে না, এবং লুকানো টেক্সটও দেখায়।
+            তবে ৩ তাই রিটান করে ।
+          </p>
+        </div>
+        <!-- Q - 3 -->
+        <div class="pb-8 mt-6">
+          <h2
+            class="mb-4 font-bold p-4 bg-white rounded-lg text-xl text-[#00303C]"
+          >
+            Question-3: What is event delegation in the DOM?
+          </h2>
+          <hr />
+          <p class="text-gray-500 p-4 rounded-lg bg-white mt-4">
+            event delegation হলো , পেরেন্ট এলিমেন্ট কে event listener দিয়ে তার
+            নিয়ন্ত্রে তার চাইল্ড গুলো কে নিয়ন্ত্র করা ।
+          </p>
+        </div>
+        <!-- Q - 4 -->
+        <div class="pb-8 mt-6">
+          <h2
+            class="mb-4 font-bold p-4 bg-white rounded-lg text-xl text-[#00303C]"
+          >
+            Question-4: What is event bubbling in the DOM?
+          </h2>
+          <hr />
+          <p class="text-gray-500 p-4 rounded-lg bg-white mt-4">
+            event bubbling এমন পদ্দ্বতি যে চাইল্ড তার বাবাকে ধরবে আবার পরে
+            দাদাকে ধরবে এভাবে চলতে থাকে । তবে stopPropagation() মাধ্যমে এটা
+            থামানো যায় ।
+          </p>
+        </div>
+        <!-- Q - 5 -->
+        <div class="pb-8 mt-6">
+          <h2
+            class="mb-4 font-bold p-4 bg-white rounded-lg text-xl text-[#00303C]"
+          >
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h2>
+          <hr />
+          <p class="text-gray-500 p-4 rounded-lg bg-white mt-4">
+            ১-document.createElement("section "); মাধ্যমে এলিমেন্ট তৈরি করবো । ২
+            - section .appendChild(newDiv); মাধ্যমে এড করবো । ৩ -newDiv.remove
+            (): মাধ্যমে মুছে ফেলবো ।
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="blog.js"></script>
+  </body>
+</html>

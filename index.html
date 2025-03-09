@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html data-theme="cupcake" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashbord</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+
+    <script
+      src="https://kit.fontawesome.com/46a0597978.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="poppins bg-[#F4F7FF] pt-6 px-20">
+    <header class="bg-white mb-10">
+      <nav class="flex justify-between mx-6 p-2 rounded-xl">
+        <!-- left side -->
+        <div class="flex items-center gap-3">
+          <img src="./image/Vector.png" alt="" />
+          <h2 class="text-[#00303C] text-3xl">
+            Dev <span class="text-[#00303C] font-bold">Board</span>
+          </h2>
+        </div>
+        <!-- right side -->
+        <div>
+          <div class="bg-[#F4F7FF] p-2 px-5 flex items-center gap-2 rounded-lg">
+            <i
+              class="fa-solid fa-check text-xl px-1 text-white bg-[#3752FD] rounded-sm"
+            ></i>
+            <p id="checkCout" class="text-[#1E1E1E] font-bold text-2xl">23</p>
+            <div class="flex">
+              <img
+                id="hex"
+                class="p-2 ml-4 bg-[#ffffff] rounded-xl"
+                src="./image/fi_2071665.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="grid grid-cols-[3fr_1fr] gap-4">
+      <!-- section left -->
+      <section class="bg-white p-4">
+        <!-- part*** 1 *** -->
+        <div class="flex justify-between mb-10">
+          <!-- first column -->
+          <div class="flex items-center p-3 gap-4 bg-[#F4F7FF]">
+            <!-- 1 -->
+            <div class="p-4 bg-white rounded-full">
+              <i
+                class="fa-solid fa-check text-xl px-1 text-white bg-[#3752FD] rounded-sm"
+              ></i>
+            </div>
+            <!-- 2 -->
+            <div>
+              <p class="text-[#00303C]">Task Assigned</p>
+              <p id="task-count" class="text-[#1E1E1E] font-bold text-2xl">
+                05
+              </p>
+            </div>
+          </div>
+          <!-- secand column -->
+
+          <div
+            id="switch"
+            class="rounded-xl bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] ... p-4 flex items-center"
+            href="http://127.0.0.1:5500/blog.html"
+          >
+            <!-- 1 -->
+            <div><img src="./image/Group.png" alt="" /></div>
+            <!-- 2 -->
+            <div>
+              <h3 class="text-white text-lg p-2 ml-6">
+                Discover Something <br />
+                New Today!
+              </h3>
+            </div>
+          </div>
+
+          <!-- third column -->
+          <div class="flex items-center p-3 gap-4 bg-[#F4F7FF]">
+            <!-- 1 -->
+            <div class="p-4 bg-white rounded-full">
+              <img src="./image/fi-sr-calendar.png" alt="" />
+            </div>
+            <!-- 2 -->
+            <div id="curDate"></div>
+            <div id="time"></div>
+          </div>
+        </div>
+        <hr />
+        <!-- part*** 2 *** -->
+        <div class="grid grid-cols-3 gap-8 mt-8">
+          <!-- card 1 -->
+          <div class="complete bg-[#F4F7FF] task-box">
+            <span class="badge text-[ #00303C bg-white border-none m-3 p-3"
+              >ShopEase</span
+            >
+            <h2 class="text-[#00303C] text-xl font-medium m-4 title">
+              Fix Mobile Button Issue
+            </h2>
+            <p class="text-gray-500 rounded-lg p-6 bg-white mx-6">
+              Debug using Chrome DevTools, check for overlapping
+            </p>
+            <div class="flex items-center justify-between gap-6 p-6">
+              <div>
+                <p class="text-gray-500">Deadline</p>
+                <p class="text-[#00303C]">21 March 2025</p>
+              </div>
+              <div>
+                <button
+                  class="bg-[#3752FD] text-white px-3 py-2 rounded-lg complete-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="complete bg-[#F4F7FF] task-box">
+            <span class="badge text-[ #00303C bg-white border-none m-3 p-3"
+              >CloudSync</span
+            >
+            <h2 class="text-[#00303C] text-xl font-medium m-4 title">
+              Add Dark Mode
+            </h2>
+            <p class="text-gray-500 rounded-lg p-6 bg-white mx-6">
+              Store the user's preference in localStorage, update CSS
+            </p>
+            <div class="flex items-center justify-between gap-6 p-6">
+              <div>
+                <p class="text-gray-500">Deadline</p>
+                <p class="text-[#00303C]">21 March 2025</p>
+              </div>
+              <div>
+                <button
+                  class="bg-[#3752FD] text-white px-3 py-2 rounded-lg complete-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="complete bg-[#F4F7FF] task-box">
+            <span class="badge text-[ #00303C bg-white border-none m-3 p-3"
+              >SwiftPay</span
+            >
+            <h2 class="text-[#00303C] text-xl font-medium m-4 title">
+              Optimize Home page 
+            </h2>
+            <p class="text-gray-500 rounded-lg p-6 bg-white mx-6">
+              Debug using Chrome DevTools, check for overlapping
+            </p>
+            <div class="flex items-center justify-between gap-6 p-6">
+              <div>
+                <p class="text-gray-500">Deadline</p>
+                <p class="text-[#00303C]">21 March 2025</p>
+              </div>
+              <div>
+                <button
+                  class="bg-[#3752FD] text-white px-3 py-2 rounded-lg complete-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="complete bg-[#F4F7FF] task-box">
+            <span class="badge text-[ #00303C bg-white border-none m-3 p-3"
+              >Meta</span
+            >
+            <h2 class="text-[#00303C] text-xl font-medium m-4 title">
+              Add new emoji 🤲
+            </h2>
+            <p class="text-gray-500 rounded-lg p-6 bg-white mx-6">
+              Debug using Chrome DevTools, check for overlapping
+            </p>
+            <div class="flex items-center justify-between gap-6 p-6">
+              <div>
+                <p class="text-gray-500">Deadline</p>
+                <p class="text-[#00303C]">21 March 2025</p>
+              </div>
+              <div>
+                <button
+                  class="bg-[#3752FD] text-white px-3 py-2 rounded-lg complete-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="complete bg-[#F4F7FF] task-box">
+            <span class="badge text-[ #00303C bg-white border-none m-3 p-3"
+              >Google LLC</span
+            >
+            <h2 class="text-[#00303C] text-xl font-medium m-4 title">
+              Integrate OpenAI API
+            </h2>
+            <p class="text-gray-500 rounded-lg p-6 bg-white mx-6">
+              Debug using Chrome DevTools, check for overlapping
+            </p>
+            <div class="flex items-center justify-between gap-6 p-6">
+              <div>
+                <p class="text-gray-500">Deadline</p>
+                <p class="text-[#00303C]">21 March 2025</p>
+              </div>
+              <div>
+                <button
+                  class="bg-[#3752FD] text-white px-3 py-2 rounded-lg complete-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class="complete bg-[#F4F7FF] task-box">
+            <span class="badge text-[ #00303C bg-white border-none m-3 p-3"
+              >Glassdoar</span
+            >
+            <h2 class="text-[#00303C] text-xl font-medium m-4 title">
+              Fix Mobile Button Issue
+            </h2>
+            <p class="text-gray-500 rounded-lg p-6 bg-white mx-6">
+              Improve Job searching Lorem ipsum dolor sit amet.
+            </p>
+            <div class="flex items-center justify-between gap-6 p-6">
+              <div>
+                <p class="text-gray-500">Deadline</p>
+                <p class="text-[#00303C]">21 March 2025</p>
+              </div>
+              <div>
+                <button
+                  class="bg-[#3752FD] text-white px-3 py-2 rounded-lg complete-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section right -->
+      <section class="bg-white items-center flex flex-col">
+        <div class="flex items-center gap-3 mt-8 mb-4">
+          <i class="fa-solid fa-clock text-xl text-center text-[#00303C]"></i>
+          <h3 class="text-[#00303C] text-xl text-center">Activity Log</h3>
+        </div>
+        <button
+          id="button"
+          class="bg-[#3752FD] mb-6 text-white px-4 py-1.5 rounded-lg"
+        >
+          Clear History
+        </button>
+        <hr />
+        <div class="history-container">
+         
+        </div>
+        <div id="history-containerrr"></div>
+      </section>
+    </main>
+    <script src="first.js"></script>
+  </body>
+</html>
