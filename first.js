@@ -40,53 +40,18 @@ const switchBtn = document
 
 //////////clear histroy///////
 
-
 const button = document.getElementById("button");
 button.addEventListener("click", function () {
   historyContainer.innerHTML = "";
 });
 
 //////////complete button ////////
-// let completeBtns = document.querySelectorAll(".complete-btn");
-// function disableBtn(button) {
-//   (button.disabled = true), button.classList.add("bg-gray-300");
-// }
-// // //  button click events
-// for (const completeBtn of completeBtns) {
-//   completeBtn.addEventListener("click", function () {
-//     disableBtn(this);
-//     alert("Board update Succesfully");
-//     // const clickTime = new Date().toLocaleTimeString();
-//     const history = document.getElementById("history-containerrr");
-//     const newhistory = document.createElement("p");}
-// var taskBox = this.closest(".task-box");
-// var taskTitle = taskBox.querySelector(".title").innerText;
-//     newhistory.innerText =  You have Complete The Task  ${taskTitle}  at ${clickTime} ;
-//     newhistory.classList.add(
-//       "bg-slate-200",
-//       "p-3",
-//       "my-3",
-//       "rounded-xl",
-//       "text-gray-600"
-//     )};
-//     history.appendChild(newhistory);
-//     let taskAssigned = document.getElementById("taskAssigned").innerText;
-//     taskAssigned = parseInt(taskAssigned) - 1;
-//     document.getElementById("taskAssigned").innerText = "0" + taskAssigned;
-
-//     let completeCount = document.getElementById("complete-count").innerText;
-//     completeCount = parseInt(completeCount) + 1;
-//     document.getElementById("complete-count").innerText = completeCount;
-//     if (taskAssigned === 0) {
-//       alert("congratulations , You've Completed All Tasks");
-//     }
-//   });
 
 //////////////////////
 const complteBtn = document.querySelectorAll(".complete-btn");
-const taskCount = document.querySelector('#task-count');
-const checkCountEl = document.querySelector('#checkCout');
-const historyContainer = document.querySelector('.history-container');
+const taskCount = document.querySelector("#task-count");
+const checkCountEl = document.querySelector("#checkCout");
+const historyContainer = document.querySelector(".history-container");
 
 let count = 6;
 let checkCount = 23;
@@ -103,15 +68,21 @@ for (let btn of complteBtn) {
     checkCountEl.textContent = checkCount;
     const currentDate = new Date();
 
-      // complte card heading;
-    const heading = e.target.closest('.complete').querySelector('h2').textContent;
-    console.log(heading)
+    // complte card heading;
+    const heading = e.target
+      .closest(".complete")
+      .querySelector("h2").textContent;
+    console.log(heading);
     // activity log p tag for show history
-    const p = document.createElement('p');
-    p.classList.add('text-gray-600', 'bg-[#F4F7FF]', 'p-4',
-       'm-6', 'rounded-lg')
-      p.textContent = `You have Complete ${heading} at ${currentDate.toLocaleTimeString()}`
-    historyContainer.prepend(p)
-
+    const p = document.createElement("p");
+    p.classList.add(
+      "text-gray-600",
+      "bg-[#F4F7FF]",
+      "p-4",
+      "m-6",
+      "rounded-lg"
+    );
+    p.textContent = `You have Complete ${heading} at ${currentDate.toLocaleTimeString()}`;
+    historyContainer.prepend(p);
   });
 }
